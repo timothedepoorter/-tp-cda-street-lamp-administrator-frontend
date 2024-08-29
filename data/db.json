@@ -1,0 +1,243 @@
+{
+"lampadaire" : [
+    {
+    "_id": {
+      "$oid": "66ceedaae13a620644f9c7bf"
+    },
+    "id": {
+      "$oid": "64f0a6b1e4b0f1a1d8b9e3d7"
+    },
+    "numIdentite": "lamp001",
+    "puissanceLumiere": 150,
+    "isAllume": true,
+    "isKO": false,
+    "GeoLocalisation": {
+      "type": "Point",
+      "coordinates": [
+        4.835659,
+        45.764043
+      ]
+    },
+    "DateDernierAllumage": {
+      "$date": "2024-08-27T20:00:00.000Z"
+    },
+    "horaireId": {
+      "$oid": "64f0a6b1e4b0f1a1d8b9e3d8"
+    },
+    "capteurs": [
+      {
+      "_id": {
+        "$oid": "66ceeda5e13a620644f9c7bc"
+      },
+      "id": {
+        "$oid": "64f0a6b1e4b0f1a1d8b9e3d4"
+      },
+      "numIdentite": "sensor001",
+      "type": "mouvement",
+      "isActif": true,
+      "isDetecting": true,
+      "isKO": false
+    },
+    {
+      "_id": {
+        "$oid": "66ceeda5e13a620644f9c7bd"
+      },
+      "id": {
+        "$oid": "64f0a6b1e4b0f1a1d8b9e3d5"
+      },
+      "numIdentite": "sensor002",
+      "type": "température",
+      "isActif": true,
+      "isDetecting": false,
+      "isKO": false
+    },
+    {
+      "_id": {
+        "$oid": "66ceeda5e13a620644f9c7be"
+      },
+      "id": {
+        "$oid": "64f0a6b1e4b0f1a1d8b9e3d6"
+      },
+      "numIdentite": "sensor003",
+      "type": "humidité",
+      "isActif": false,
+      "isDetecting": false,
+      "isKO": true
+    }
+  ]
+  },
+  {
+    "_id": {
+      "$oid": "66ceedaae13a620644f9c7c0"
+    },
+    "id": {
+      "$oid": "64f0a6b1e4b0f1a1d8b9e3d8"
+    },
+    "numIdentite": "lamp002",
+    "puissanceLumiere": 100,
+    "isAllume": false,
+    "isKO": false,
+    "GeoLocalisation": {
+      "type": "Point",
+      "coordinates": [
+        4.841659,
+        45.760043
+      ]
+    },
+    "DateDernierAllumage": {
+      "$date": "2024-08-26T18:00:00.000Z"
+    },
+    "horaireId": {
+      "$oid": "64f0a6b1e4b0f1a1d8b9e3d9"
+    },
+    "capteurs": [
+      {
+      "_id": {
+        "$oid": "66ceeda5e13a620644f9c7bc"
+      },
+      "id": {
+        "$oid": "64f0a6b1e4b0f1a1d8b9e3d4"
+      },
+      "numIdentite": "sensor001",
+      "type": "mouvement",
+      "isActif": true,
+      "isDetecting": true,
+      "isKO": false
+    },
+    {
+      "_id": {
+        "$oid": "66ceeda5e13a620644f9c7bd"
+      },
+      "id": {
+        "$oid": "64f0a6b1e4b0f1a1d8b9e3d5"
+      },
+      "numIdentite": "sensor002",
+      "type": "température",
+      "isActif": true,
+      "isDetecting": false,
+      "isKO": false
+    },
+    {
+      "_id": {
+        "$oid": "66ceeda5e13a620644f9c7be"
+      },
+      "id": {
+        "$oid": "64f0a6b1e4b0f1a1d8b9e3d6"
+      },
+      "numIdentite": "sensor003",
+      "type": "humidité",
+      "isActif": false,
+      "isDetecting": false,
+      "isKO": true
+    }
+  ]
+  }
+],
+"utilisateur" : [
+    {
+    "_id": {
+      "$oid": "66ceeda1e13a620644f9c7b9"
+    },
+    "id": {
+      "$oid": "64f0a6b1e4b0f1a1d8b9e3d1"
+    },
+    "identifiant": "admin",
+    "motDePasse": "hashed_admin_password"
+  },
+  {
+    "_id": {
+      "$oid": "66ceeda1e13a620644f9c7ba"
+    },
+    "id": {
+      "$oid": "64f0a6b1e4b0f1a1d8b9e3d2"
+    },
+    "identifiant": "user1",
+    "motDePasse": "hashed_user1_password"
+  },
+  {
+    "_id": {
+      "$oid": "66ceeda1e13a620644f9c7bb"
+    },
+    "id": {
+      "$oid": "64f0a6b1e4b0f1a1d8b9e3d3"
+    },
+    "identifiant": "user2",
+    "motDePasse": "hashed_user2_password"
+  }
+],
+"horaire" : [
+    {
+    "_id": {
+      "$oid": "66ceedaee13a620644f9c7c1"
+    },
+    "id": {
+      "$oid": "64f0a6b1e4b0f1a1d8b9e3d8"
+    },
+    "saison": "été",
+    "heureDebut": {
+      "$date": "2024-08-26T06:00:00.000Z"
+    },
+    "heureFin": {
+      "$date": "2024-08-26T22:00:00.000Z"
+    },
+    "dureeEclairage": 16
+  },
+  {
+    "_id": {
+      "$oid": "66ceedaee13a620644f9c7c2"
+    },
+    "id": {
+      "$oid": "64f0a6b1e4b0f1a1d8b9e3d9"
+    },
+    "saison": "hiver",
+    "heureDebut": {
+      "$date": "2024-12-01T07:00:00.000Z"
+    },
+    "heureFin": {
+      "$date": "2024-12-01T17:00:00.000Z"
+    },
+    "dureeEclairage": 10
+  }
+],
+"capteur" : [
+    {
+    "_id": {
+      "$oid": "66ceeda5e13a620644f9c7bc"
+    },
+    "id": {
+      "$oid": "64f0a6b1e4b0f1a1d8b9e3d4"
+    },
+    "numIdentite": "sensor001",
+    "type": "mouvement",
+    "isActif": true,
+    "isDetecting": true,
+    "isKO": false
+  },
+  {
+    "_id": {
+      "$oid": "66ceeda5e13a620644f9c7bd"
+    },
+    "id": {
+      "$oid": "64f0a6b1e4b0f1a1d8b9e3d5"
+    },
+    "numIdentite": "sensor002",
+    "type": "température",
+    "isActif": true,
+    "isDetecting": false,
+    "isKO": false
+  },
+  {
+    "_id": {
+      "$oid": "66ceeda5e13a620644f9c7be"
+    },
+    "id": {
+      "$oid": "64f0a6b1e4b0f1a1d8b9e3d6"
+    },
+    "numIdentite": "sensor003",
+    "type": "humidité",
+    "isActif": false,
+    "isDetecting": false,
+    "isKO": true
+  }
+]
+}
