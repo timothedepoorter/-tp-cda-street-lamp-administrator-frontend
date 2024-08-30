@@ -10,16 +10,16 @@ export const useData = () => {
     const [lampadaires, setLampadaires] = useState<Lampadaire[]>([])
     const [horaires, setHoraires] = useState<Horaire[]>([])
     const [capteurs, setCapteurs] = useState<Capteur[]>([])
-    const [error, setError] = useState("")
 
     useEffect(() => {
-        function dealWithError(e: unknown, item:string) {        
+
+        async function dealWithError(e: unknown, item:string) {        
             if (e instanceof Error) {
-                console.log(e)
                 const message = `Erreur lors de la récupération des ${item} : ` + e.message
-                setError(error? error + "\n" + message : message)
+                console.log(message)
             }
         }
+        // TODO: Switch to React Router loader function or react-query
         getLampadaires()
             .then(data => {
                 setLampadaires(data)})
@@ -30,7 +30,7 @@ export const useData = () => {
         getCapteurs()
             .then(data => setCapteurs(data))
             .catch(e => dealWithError(e, "capteurs"))
-    }, [error]);
+    }, []);
 
-    return { lampadaires, horaires, capteurs, error }
+    return { lampadaires, horaires, capteurs  }
 }

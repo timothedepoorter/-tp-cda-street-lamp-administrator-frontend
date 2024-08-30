@@ -15,7 +15,7 @@ function App() {
     motDePasse: "abcdef",
     id: ''
   }
-
+  
   function MainLayout () {
     return(
     <>
@@ -40,7 +40,7 @@ function App() {
           path: '/control-panel',
           element: <ControlPanel />,
         },
-                {
+          {
           path: '/list-view',
           element: <ListView />,
         },

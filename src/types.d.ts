@@ -46,7 +46,6 @@ export type Context = {
     lampadaires: Lampadaire[];
     horaires: Horaire[];
     capteurs: Capteur[];
-    error: string;
 }
 
 export type LampadairesStatus = {
