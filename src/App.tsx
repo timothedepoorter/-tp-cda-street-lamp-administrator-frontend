@@ -8,6 +8,7 @@ import { useData } from "./hooks/useData"
 import { Utilisateur } from "./types";
 import DetailsView from './pages/DetailsView/DetailsView.tsx';
 import ListView from './pages/ListView/ListView.tsx';
+import Login from './pages/Login/Login.tsx';
 
 function App() {
   const context = useData();
@@ -53,7 +54,7 @@ function App() {
     },
     {
       path: "/login",
-      element: <p>login</p>,
+      element: <Login />,
     }
   ])
   
