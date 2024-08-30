@@ -17,14 +17,12 @@ function App() {
   }
 
   function MainLayout () {
-
     return(
     <>
       <NavBar loggedUser={userBidon}/>
       <AppContext.Provider value={context}>         
       <Outlet />
-      </AppContext.Provider>
-  
+      </AppContext.Provider>  
     </>
     )
   };
