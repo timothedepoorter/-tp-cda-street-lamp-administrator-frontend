@@ -1,12 +1,13 @@
 
 import { RouterProvider} from 'react-router-dom'
 import { createBrowserRouter, Outlet } from "react-router-dom"
-import ControlPanel from "./pages/ControlPanel.tsx"
+import ControlPanel from "./pages/ControlPanel/ControlPanel.tsx"
 import NavBar from "./components/NavBar/NavBar.tsx";
 import { AppContext } from "./contexts/AppContext.tsx";
 import { useData } from "./hooks/useData"
 import { Utilisateur } from "./types";
 import DetailsView from './pages/DetailsView/DetailsView.tsx';
+import ListView from './pages/ListView/ListView.tsx';
 
 function App() {
   const context = useData();
@@ -22,8 +23,7 @@ function App() {
       <NavBar loggedUser={userBidon}/>
       <AppContext.Provider value={context}>         
       <Outlet />
-      </AppContext.Provider>
-  
+      </AppContext.Provider>  
     </>
     )
   };
@@ -44,7 +44,11 @@ function App() {
         {
           path: '/lampadaire/:id',
           element: <DetailsView />,
-        }
+        },
+          {
+          path: '/list-view',
+          element: <ListView />,
+        },
       ],
     },
     {
@@ -59,10 +63,5 @@ function App() {
     </>
   )
 }
-
-
-
-
-
 
 export default App
