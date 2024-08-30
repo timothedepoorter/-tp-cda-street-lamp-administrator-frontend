@@ -104,3 +104,16 @@ body {
 h1 {
   font-size: 35px;
 }
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--fond);
+  background-color: var(--primary);
+  width: 100px;
+  height: 40px;
+  border-radius: 15px;
+  margin: 10px;
+}

@@ -1,10 +1,10 @@
-import Title from "../components/Title"
-import StatusIndicator from "../components/StatusIndicator"
-import Counter from "../components/Counter"
+import Title from "../../components/Title"
+import StatusIndicator from "../../components/StatusIndicator"
+import Counter from "../../components/Counter"
 import './ControlPanel.css'
 import { useContext } from "react"
-import { AppContext } from "../contexts/AppContext"
-import type { Lampadaire, LampadairesStatus } from "../types"
+import { AppContext } from "../../contexts/AppContext"
+import type { Lampadaire, LampadairesStatus } from "../../types"
 function ControlPanel() {
   const { lampadaires } = useContext(AppContext)
 
