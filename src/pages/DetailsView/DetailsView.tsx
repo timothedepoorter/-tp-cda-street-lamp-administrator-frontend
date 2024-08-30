@@ -1,31 +1,14 @@
 import { useParams } from 'react-router-dom';
 import './DetailsView.css'
 import map from '../../assets/map.png'
+import lightbulb from '../../assets/fxemoji--lightbulb.svg'
 import { AppContext } from "../../contexts/AppContext"
 import { useContext } from "react"
-import { Lampadaire } from '../../types';
-import toggleOn from '../../assets/toggle_on.svg'
-import toggleOff from '../../assets/toggle_off.svg'
-
-const ToggleComponent = ({active}:{active:boolean})=>{
-        return(<div><img src={active? toggleOn : toggleOff} width="33.33px" alt={active? "toggle on":"toggle off"} /></div>)
-}
-
-
-const CapteursComponent = ({ lampadaire }: { lampadaire: Lampadaire }) => {
-    console.log(lampadaire.capteurs)
-    return (<div className="sensors"><div className='bold'>Capteurs</div>  
-    <div><div>Piéton</div> <ToggleComponent active={true}/></div>
-    <div><div>Véhicule</div> <ToggleComponent active={true}/></div>
-    <div><div>Météo</div> <ToggleComponent active={false}/></div>
-     </div>)
-}
-
+import CapteursComponent from '../../components/CapteursComponent';
 
 const DetailsView = () => {
     const { id } = useParams()
     const { lampadaires } = useContext(AppContext)
-    // console.log(lampadaires)
 if(id){
     const lampadaire = lampadaires.find(l =>l.id === id);
 
@@ -35,7 +18,10 @@ if(id){
                 <div className='two-columns'>
                     <div className="map">
                         <img src={map} width="738px" height="656px" alt="map" />
+                        <img className='lightbulb' src={lightbulb} width="100px" alt="lightbulb" />
                     </div>
+                    
+                    
                     <div className='details-card'>
                         <p className='bold'>Numéro de série :</p>
                         <p className="light-italic">{id}</p>
