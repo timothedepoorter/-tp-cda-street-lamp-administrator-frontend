@@ -1,20 +1,64 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import { RouterProvider} from 'react-router-dom'
+import { createBrowserRouter, Outlet } from "react-router-dom"
+import ControlPanel from "./pages/ControlPanel.tsx"
+import NavBar from "./components/NavBar/NavBar.tsx";
+import { AppContext } from "./contexts/AppContext.tsx";
 import { useData } from "./hooks/useData"
+import { Utilisateur } from "./types";
 
 function App() {
-  const { lampadaires, utilisateurs, horaires, capteurs, error } = useData();
-  console.log(lampadaires)
+  const context = useData();
+  const userBidon:Utilisateur = {
+    identifiant: "Georges",
+    motDePasse: "abcdef",
+    id: ''
+  }
 
+  function MainLayout () {
+
+    return(
+    <>
+      <NavBar loggedUser={userBidon}/>
+      <AppContext.Provider value={context}>         
+      <Outlet />
+      </AppContext.Provider>
+  
+    </>
+    )
+  };
+  
+  
+   const Router = createBrowserRouter([
+    {
+      element: <MainLayout />,
+      children: [
+        {
+          path: "/",
+          element: <p>home</p>,
+        },
+        {
+          path: '/control-panel',
+          element: <ControlPanel />,
+        }
+      ],
+    },
+    {
+      path: "/login",
+      element: <p>login</p>,
+    }
+  ])
+  
   return (
     <>
-      <div><h1>Hello world from eclairage-front!</h1></div>
-
-      <p>{error ? '❌ ' + error: 'No errors ✅'}</p>
+      <RouterProvider router={Router} />
     </>
   )
 }
+
+
+
+
+
 
 export default App

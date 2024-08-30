@@ -1,6 +1,7 @@
 import axios from "axios"
-import type { Utilisateur, Lampadaire, Capteur, Horaire } from '../types'
+import type { Lampadaire, Capteur, Horaire } from '../types'
 const apiUrl = process.env.REACT_APP_JSON_SERVER_URL
+// const apiUrl = process.env.REACT_APP_TEST_API_URL
 
 // TODO : généricité
 
@@ -11,13 +12,13 @@ export const getLampadaires = async () => {
             .catch(e => reject(e));
     })
 }
-export const getUtilisateurs = async () => {
-    return new Promise<Utilisateur[]>((resolve, reject) => {
-        axios.get(apiUrl + "utilisateur")
-            .then(response => resolve(response.data))
-            .catch(e => reject(e));
-    })
-}
+// export const getUtilisateurs = async () => {
+//     return new Promise<Utilisateur[]>((resolve, reject) => {
+//         axios.get(apiUrl + "utilisateur")
+//             .then(response => resolve(response.data))
+//             .catch(e => reject(e));
+//     })
+// }
 export const getCapteurs = async () => {
     return new Promise<Capteur[]>((resolve, reject) => {
         axios.get(apiUrl + "capteur")

@@ -1,26 +1,31 @@
-type mongoObjectId = object
+// type mongoObjectId = {$oid: string}
+
+type GeoLocation= {
+      type: string,
+      coordinates: [ number, number]
+    }
 
 export type Lampadaire = {
-    id: mongoObjectId,
+    id: string,
+    internalId: string,
     numIdentite: string,
     puissanceLumiere: number,
     isAllume: boolean,
     isKO: boolean,
-    GeoLocalisation: object,
-    DateDernierAllumage: Date,
-    horaireId: number,
+    geoLocalisation: GeoLocation,
+    dateDernierAllumage: string,
+    horaireId: string,
     capteurs: Capteur[]
 }
 
 export type Utilisateur = {
-    id: mongoObjectId,
+    id: string,
     identifiant: string,
     motDePasse: string,
 }
 
 export type Capteur = {
-    _id: mongoObjectId,
-    id: mongoObjectId, // à virer
+    id: string,
     numIdentite: string,
     type: string,
     isActif: boolean,
@@ -29,10 +34,20 @@ export type Capteur = {
 }
 
 export type Horaire = {
-    _id: mongoObjectId,
-    id: mongoObjectId, // à virer
+    id: string,
+    internalId: string,
     saison: string,
-    heureDebut: Date,
-    heureFin: Date,
+    heureDebut: string,
+    heureFin: string,
     dureeEclairage: number
 }
+
+export type Context = {
+    lampadaires: Lampadaire[];
+    horaires: Horaire[];
+    capteurs: Capteur[];
+    error: string;
+}
+
+export type LampadairesStatus = {
+    on:number, off:number, ko:number}
