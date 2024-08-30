@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar/NavBar.tsx";
 import { AppContext } from "./contexts/AppContext.tsx";
 import { useData } from "./hooks/useData"
 import { Utilisateur } from "./types";
+import DetailsView from './pages/DetailsView/DetailsView.tsx';
 
 function App() {
   const context = useData();
@@ -40,6 +41,10 @@ function App() {
           path: '/control-panel',
           element: <ControlPanel />,
         },
+        {
+          path: '/lampadaire/:id',
+          element: <DetailsView />,
+        }
       ],
     },
     {
