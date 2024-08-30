@@ -9,6 +9,7 @@ import { Utilisateur } from "./types";
 import DetailsView from './pages/DetailsView/DetailsView.tsx';
 import ListView from './pages/ListView/ListView.tsx';
 import Login from './pages/Login/Login.tsx';
+import { Button } from './components/Button.tsx';
 
 function App() {
   const context = useData();
@@ -36,7 +37,11 @@ function App() {
       children: [
         {
           path: "/",
-          element: <p>home</p>,
+          element: <>
+          <Button linkTo={"/login"} label={"Login"}/>
+          <Button linkTo={"control-panel"} label={"Panneau de contrôle"}/>
+          <Button linkTo={"/list-view"} label={"Vue liste"}/>      
+          </>,
         },
         {
           path: '/control-panel',

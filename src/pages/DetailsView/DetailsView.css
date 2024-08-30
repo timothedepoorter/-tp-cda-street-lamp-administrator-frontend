@@ -1,5 +1,6 @@
 .map {
     border-radius: inherit;
+    position:relative;
 }
 
 .two-columns {
@@ -39,4 +40,10 @@
     border-radius: 60px;
     padding: 10px 22px;
 
+}
+
+.map .lightbulb{
+        position: absolute;
+        top: 278px;
+        left: 319px;
 }

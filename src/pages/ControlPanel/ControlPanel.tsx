@@ -1,6 +1,6 @@
 import Title from "../../components/Title"
 import StatusIndicator from "../../components/StatusIndicator"
-import Counter from "../../components/Counter"
+import Counter from "../../components/Counter/Counter"
 import './ControlPanel.css'
 import { useContext } from "react"
 import { AppContext } from "../../contexts/AppContext"
