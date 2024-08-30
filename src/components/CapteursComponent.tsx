@@ -4,13 +4,13 @@ import Toggle from './Toggle';
 
 const CapteursComponent = ({ lampadaire }: { lampadaire: Lampadaire }) => {
     console.log(lampadaire.capteurs)
-    const capteurMouvement = lampadaire.capteurs.find(c => c.type=="mouvement")
-    const capteurTemperature = lampadaire.capteurs.find(c => c.type=="température")
-    const capteurHumidite = lampadaire.capteurs.find(c => c.type=="humidité")
+    const capteurPieton = lampadaire.capteurs.find(c => c.type=="pieton")
+    const capteurVehicule = lampadaire.capteurs.find(c => c.type=="vehicule")
+    const capteurMeteo = lampadaire.capteurs.find(c => c.type=="meteo")
     return (<div className="sensors"><div className='bold'>Capteurs</div>  
-    <div><div>Mouvement</div> <Toggle active={capteurMouvement?.isActif}/></div>
-    <div><div>Température</div> <Toggle active={capteurTemperature?.isActif}/></div>
-    <div><div>Humidité</div> <Toggle active={capteurHumidite?.isActif}/></div>
+    <div><div>Piéton</div> <Toggle active={capteurPieton?.isActif}/></div>
+    <div><div>Véhicule</div> <Toggle active={capteurVehicule?.isActif}/></div>
+    <div><div>Météo</div> <Toggle active={capteurMeteo?.isActif}/></div>
      </div>)
 }
 
