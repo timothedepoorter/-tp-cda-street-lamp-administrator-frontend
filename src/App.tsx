@@ -14,9 +14,8 @@ function App() {
     motDePasse: "abcdef",
     id: ''
   }
-
+  
   function MainLayout () {
-
     return(
     <>
       <NavBar loggedUser={userBidon}/>
@@ -40,7 +39,7 @@ function App() {
         {
           path: '/control-panel',
           element: <ControlPanel />,
-        }
+        },
       ],
     },
     {

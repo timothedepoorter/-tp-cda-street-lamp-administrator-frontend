@@ -7,21 +7,14 @@ const apiUrl = process.env.REACT_APP_JSON_SERVER_URL
 
 export const getLampadaires = async () => {
     return new Promise<Lampadaire[]>((resolve, reject) => {
-        axios.get(apiUrl + "lampadaire")
+        axios.get(apiUrl + "lampadafghfgire")
             .then(response => resolve(response.data))
             .catch(e => reject(e));
     })
 }
-// export const getUtilisateurs = async () => {
-//     return new Promise<Utilisateur[]>((resolve, reject) => {
-//         axios.get(apiUrl + "utilisateur")
-//             .then(response => resolve(response.data))
-//             .catch(e => reject(e));
-//     })
-// }
 export const getCapteurs = async () => {
     return new Promise<Capteur[]>((resolve, reject) => {
-        axios.get(apiUrl + "capteur")
+        axios.get(apiUrl + "xcwvcxv")
             .then(response => resolve(response.data))
             .catch(e => reject(e));
     })
