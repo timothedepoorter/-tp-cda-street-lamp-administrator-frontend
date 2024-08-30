@@ -1,0 +1,32 @@
+.list-line {
+    display: grid;
+    grid-template-columns: 9fr 1fr 1fr;
+}
+
+.list-line>* {
+    display: flex;
+    align-items: center;
+}
+
+.list-line>:not(:first-child) {
+    justify-content: center;
+}
+
+.details-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--fond);
+    background-color: var(--primary);
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.alert-badge {
+    position: absolute;
+    top: -40px;
+    right: -55px;
+}
