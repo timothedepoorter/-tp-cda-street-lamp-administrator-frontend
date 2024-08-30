@@ -21,7 +21,7 @@
         "id": "66ceeda5e13a620644f9c7bc",
         "internalId": "64f0a6b1e4b0f1a1d8b9e3d4",
         "numIdentite": "sensor001",
-        "type": "mouvement",
+        "type": "pieton",
         "isActif": true,
         "isDetecting": true,
         "isKO": false
@@ -30,7 +30,7 @@
         "id": "66ceeda5e13a620644f9c7bd",
         "internalId": "64f0a6b1e4b0f1a1d8b9e3d5",
         "numIdentite": "sensor002",
-        "type": "température",
+        "type": "vehicule",
         "isActif": true,
         "isDetecting": false,
         "isKO": false
@@ -39,7 +39,7 @@
         "id": "66ceeda5e13a620644f9c7be",
         "internalId": "64f0a6b1e4b0f1a1d8b9e3d6",
         "numIdentite": "sensor003",
-        "type": "humidité",
+        "type": "meteo",
         "isActif": false,
         "isDetecting": false,
         "isKO": true
@@ -67,7 +67,7 @@
         "id": "66ceeda5e13a620644f9c7c1",
         "internalId": null,
         "numIdentite": "sensor004",
-        "type": "mouvement",
+        "type": "pieton",
         "isActif": true,
         "isDetecting": true,
         "isKO": false
@@ -76,7 +76,7 @@
         "id": "66ceeda5e13a620644f9c7c2",
         "internalId": null,
         "numIdentite": "sensor005",
-        "type": "température",
+        "type": "vehicule",
         "isActif": false,
         "isDetecting": false,
         "isKO": true
@@ -85,7 +85,7 @@
         "id": "66ceeda5e13a620644f9c7c3",
         "internalId": null,
         "numIdentite": "sensor006",
-        "type": "humidité",
+        "type": "meteo",
         "isActif": true,
         "isDetecting": false,
         "isKO": false
@@ -148,7 +148,7 @@
     "id": "66ceeda5e13a620644f9c7bc",
     "internalId": "64f0a6b1e4b0f1a1d8b9e3d4",
     "numIdentite": "sensor001",
-    "type": "mouvement",
+    "type": "pieton",
     "isActif": true,
     "isDetecting": true,
     "isKO": false
@@ -157,7 +157,7 @@
     "id": "66ceeda5e13a620644f9c7bd",
     "internalId": "64f0a6b1e4b0f1a1d8b9e3d5",
     "numIdentite": "sensor002",
-    "type": "température",
+    "type": "vehicule",
     "isActif": true,
     "isDetecting": false,
     "isKO": false
@@ -166,7 +166,7 @@
     "id": "66ceeda5e13a620644f9c7be",
     "internalId": "64f0a6b1e4b0f1a1d8b9e3d6",
     "numIdentite": "sensor003",
-    "type": "humidité",
+    "type": "meteo",
     "isActif": false,
     "isDetecting": false,
     "isKO": true
@@ -175,7 +175,7 @@
     "id": "66ceeda5e13a620644f9c7c1",
     "internalId": "64f0a6b1e4b0f1a1d8b9e3d7",
     "numIdentite": "sensor004",
-    "type": "mouvement",
+    "type": "pieton",
     "isActif": true,
     "isDetecting": true,
     "isKO": false
@@ -184,7 +184,7 @@
     "id": "66ceeda5e13a620644f9c7c2",
     "internalId": "64f0a6b1e4b0f1a1d8b9e3d8",
     "numIdentite": "sensor005",
-    "type": "température",
+    "type": "vehicule",
     "isActif": false,
     "isDetecting": false,
     "isKO": true
@@ -193,7 +193,7 @@
     "id": "66ceeda5e13a620644f9c7c3",
     "internalId": "64f0a6b1e4b0f1a1d8b9e3d9",
     "numIdentite": "sensor006",
-    "type": "humidité",
+    "type": "meteo",
     "isActif": true,
     "isDetecting": false,
     "isKO": false
