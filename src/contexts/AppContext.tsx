@@ -1,2 +1,10 @@
 import { createContext } from "react"
-export const AppContext = createContext({})
+import { Context } from "../types"
+const context: Context = {
+    lampadaires: [],
+    utilisateurs: [],
+    horaires: [],
+    capteurs: [],
+    error: ""
+}
+export const AppContext = createContext(context)
