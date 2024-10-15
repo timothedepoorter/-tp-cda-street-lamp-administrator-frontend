@@ -21,7 +21,6 @@ export const getLampadaires = async () => {
     return new Promise<Lampadaire[]>((resolve, reject) => {
         axios.get(apiUrl + "lampadaire")
             .then(response => {
-                console.log(response)
                 resolve(response.data)})
             .catch(e => reject(e));
     })
