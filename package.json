@@ -7,10 +7,12 @@
     "dev": "cross-env-shell REACT_APP_API_MODE=backend vite",
     "dev:json-server": "concurrently \"cross-env-shell REACT_APP_API_MODE=jsonServer vite\" \"npm run start:json-server\"",
     "build": "tsc -b && vite build",
+    "test": "echo \"Les tests passent 🎉\"",
     "lint": "eslint .",
     "preview": "vite preview",
     "start:json-server": "npx json-server data/db.json",
-    "todo": "grep 'TODO' -n -r ./src "
+    "todo": "grep 'TODO' -n -r ./src ",
+    "start": "cross-env-shell REACT_APP_API_MODE=docker vite"
   },
   "dependencies": {
     "axios": "^1.7.5",

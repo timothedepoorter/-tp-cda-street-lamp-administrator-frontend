@@ -16,7 +16,7 @@ export const useData = () => {
         async function dealWithError(e: unknown, item:string) {        
             if (e instanceof Error) {
                 const message = `Erreur lors de la récupération des ${item} : ` + e.message
-                console.log(message)
+                console.error(message)
             }
         }
         // TODO: Switch to React Router loader function or react-query
